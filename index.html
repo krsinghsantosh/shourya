@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automatic Photo Slideshow</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .slideshow-container {
+            width: 600px;
+            height: 400px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<h2>KINGWOODS WORLD SCHOOL</h2>
+
+<div class="slideshow-container">
+    <img class="mySlides" src="KINGWOODS.jpg" alt="Slide 1">
+    <img class="mySlides" src="SHOURYA1.jpg" alt="Slide 2">
+    <img class="mySlides" src="SHOURYA-C.jpg" alt="Slide 3">
+</div>
+
+<script>
+    let slideIndex = 0;
+    autoShowSlides();
+
+    function autoShowSlides() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex - 1].style.display = "block";  
+        setTimeout(autoShowSlides, 3000); // Change image every 3 seconds
+    }
+</script>
+
+<h2 style="text-align: center;">SHOURYA SCHOOL DETAILS</h2>
+
+
+
+
+
+<!-- Container -->
+<div style="display: flex;">
+    <!-- First Image -->
+    <img src="KINGWOODS.jpg" alt="Sample Photo" width="900" height="500">
+    
+
+    <!-- Second Image -->
+    <img src="SHOURYA.jpg" alt="Sample Photo" width="300" height="500">
+   
+
+</div>
+<!-- Container -->
+<div style="display: flex;">
+
+<!-- Display JPEG -->
+<h3>FEE-APR-25</h3>
+<img src="FEE-APR-25.jpg" alt="Sample Photo" width="300">
+<a href="FEE-APR-25.jpg" download> Klick for Download</a><br>
+
+<!-- Display JPEG -->
+<h3>FEE-MAY-25</h3>
+<img src="FEE-MAY-25.jpg" alt="Sample Photo" width="300">
+<a href="FEE-MAY-25.jpg" download> Klick for Download</a><br>
+
+<!-- Display JPEG -->
+<h3>FEE-JUNE-JULY-25</h3>
+<img src="FEE-JUNE-JULY-25.jpg" alt="Sample Photo" width="300">
+<a href="FEE-JUNE-JULY-25.jpg" download> Klick for Download</a><br>
+
+
+</div>
+<!-- Display PDF -->
+<h3>PDF Preview:</h3>
+<embed src="document.pdf" type="application/pdf" width="600" height="500">
+
+<!-- Download Links -->
+<h3>Download Files:</h3>
+<a href="SHOURYA.jpg" download>Download SHOURYA PHOTO</a><br>
+<a href="FEE-MAY-25.jpg" download>Download FEE MAY-25 </a><br>
+<a href="document.pdf" download>Download PDF</a>
+
+</body>
+</html>
